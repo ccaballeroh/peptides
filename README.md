@@ -1,6 +1,6 @@
 ## Installing Instructions
 
-You must create a new conda environment with the following command in Anaconda prompt:
+You must create a new conda environment with the following command in Anaconda Prompt:
 
 ```bash
 conda env create --file pept_seq.yml
@@ -13,6 +13,7 @@ Once the environment is created, you can activate it in the Anaconda Prompt with
 ```bash
 conda activate pept_seq.yml
 ```
+
 ## Settings
 
 All the possible settings are in one [settings.py](./src/settings.py) file.
