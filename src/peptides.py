@@ -25,7 +25,7 @@ __all__ = ["send_sequence", "download", "send_sequence_mods"]
 DOWNLOAD_PATH_ = Path(DOWNLOAD_PATH)
 LOG_FILE_ = Path(LOG_FILE)
 
-# auxiliar functions
+# Auxiliar functions
 
 
 def _get_ran_url(sequence: str) -> str:
@@ -110,7 +110,7 @@ def _logging(sequence: str, modifications: List[str], ran_id: str) -> None:
         csv_writer.writerow(row)
 
 
-# Main module's functions
+# Module's main functions
 
 
 def send_sequence_mods(
