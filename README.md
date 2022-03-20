@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ccaballeroh/peptides/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ccaballeroh/peptides/HEAD?labpath=Example.ipynb)
 
 ## Installing Instructions
 
