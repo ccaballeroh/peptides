@@ -1,4 +1,3 @@
 .mypy_cache
 .vscode
 *.pyc
-src/__pycache__
