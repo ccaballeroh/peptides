@@ -1,0 +1,6 @@
+name: pept_seq
+dependencies:
+  - python=3.8
+  - requests
+  - pandas
+  - beautifulsoup4
