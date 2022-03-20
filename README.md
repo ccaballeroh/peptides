@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ccaballeroh/peptides/HEAD)
+
 ## Installing Instructions
 
 You must create a new conda environment with the following command in Anaconda Prompt:
