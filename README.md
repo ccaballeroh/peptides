@@ -5,7 +5,7 @@
 You must create a new conda environment with the following command in Anaconda Prompt:
 
 ```bash
-conda env create --file pept_seq.yml
+conda env create --file environment.yml
 ```
 
 The previous command will create an environment with all the dependencies needed to run the code.
@@ -13,7 +13,7 @@ The previous command will create an environment with all the dependencies needed
 Once the environment is created, you can activate it in the Anaconda Prompt with:
 
 ```bash
-conda activate pept_seq.yml
+conda activate pept_seq
 ```
 
 ## Settings
