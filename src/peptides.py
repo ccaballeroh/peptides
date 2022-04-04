@@ -1,4 +1,5 @@
 import csv
+import re
 import time
 import urllib.error
 import urllib.request
@@ -18,8 +19,9 @@ from src.constants import (
     MODIFICATIONS_RULES,
     SETTINGS,
 )
+from src.experts import generate_params
 
-__all__ = ["send_sequence", "download", "send_sequence_mods"]
+__all__ = ["send_sequence", "download", "send_sequence_mods", "send_sequence_expert"]
 
 
 DOWNLOAD_PATH_ = Path(DOWNLOAD_PATH)
@@ -42,6 +44,21 @@ def _get_ran_url(sequence: str) -> str:
     soup = BeautifulSoup(request.text, "html.parser")
     action = soup.find("form", attrs={"name": "form1"}).get("action")
     return action
+
+
+def _call_form_expert(fields: Dict[str, str]) -> str:
+    """Make a call with some data fields."""
+
+    url = BASE_URL + "mod_ss_upload.php"
+    request = requests.post(url, data=fields)
+    soup = BeautifulSoup(request.text, "html.parser")
+    link = soup.find("a", attrs={"href": re.compile(r"ran=")})
+    if link == -1:
+        print("Process failed")
+        exit(-1)
+    else:
+        ran_id = link.get_text().split("=")[1]
+        return ran_id
 
 
 def _call_form(ran_url: str, fields: Dict[str, str]) -> None:
@@ -151,3 +168,10 @@ def download(ran_id: str, waiting_time: int = 60) -> None:
             print(f"Try again in {waiting_time/60} mins.")
             time.sleep(waiting_time)
     print(f"{filename} successfully downloaded")
+
+
+def send_sequence_expert(sequence: str) -> None:
+    """Send sequence to expert page for prediction."""
+    params, mods = generate_params(sequence)
+    ran_id = _call_form_expert(fields=params)
+    _logging(sequence, mods, ran_id)
