@@ -4,11 +4,11 @@ from pathlib import Path
 from src.constants import (
     DB_OUTPUT_FILE,
     DB_OUTPUT_PATH,
-    PASTA_INPUT_PATH,
+    FASTA_INPUT_PATH,
 )
 
 db_output_file = DB_OUTPUT_PATH / Path(DB_OUTPUT_FILE)
-pasta_input_path = Path(PASTA_INPUT_PATH)
+fasta_input_path = Path(FASTA_INPUT_PATH)
 
 
 def _write_row_to_db(file, row):
@@ -44,12 +44,12 @@ def process_fasta(file, db_output_file):
 
 
 def run():
-    if pasta_input_path.is_dir():
-        for file in pasta_input_path.iterdir():
+    if fasta_input_path.is_dir():
+        for file in fasta_input_path.iterdir():
             process_fasta(file, db_output_file)
         else:
             print(
-                f"All files in the `{pasta_input_path.name}` folder were succesfully processed!\n"
+                f"All files in the `{fasta_input_path.name}` folder were succesfully processed!\n"
             )
     print(f"The CSV {db_output_file.name} was created.")
     return db_output_file

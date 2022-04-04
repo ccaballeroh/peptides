@@ -5,7 +5,7 @@ from src import modifiers_parser
 from src.settings import (
     SETTINGS,
     DB_OUTPUT_FILE,
-    PASTA_INPUT_PATH,
+    FASTA_INPUT_PATH,
     LOG_FILE,
     DOWNLOAD_PATH,
     MODIFICATIONS_RULES,
@@ -20,7 +20,7 @@ __all__ = [
     "SETTINGS",
     "CONVERSION",
     "DB_OUTPUT_FILE",
-    "PASTA_INPUT_PATH",
+    "FASTA_INPUT_PATH",
     "MODIFICATIONS_RULES",
     "swiss_args",
     "ffncaa_args",
