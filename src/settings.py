@@ -2,13 +2,15 @@
 
 SETTINGS = {
     "email": "myemail@email.com",
-    "time": "50ps",  # 50 picoseconds
+    "time": "50ps",  # 50 picoseconds other option is 100ps
     "env": "vac",  # Peptide env: vaccumm
     "topol": "no",
     "cluster": "no",
     "traj": "no",
     "graph": "no",  # Graph and RMS: No
 }
+
+LIBRARY = "ffncaa"  # other option is "swiss"
 
 ## File names and folder paths
 
@@ -22,7 +24,7 @@ DOWNLOAD_PATH = "outputs"  # name of folder where to download simulations result
 MODIFICATIONS_RULES = {
     "V": "norvaline",
     "L": "norleucine",
-    "I": "2aminobutyricacid",
-    "R": "No Modification",  #  It's supposed to be 2,4-diaminobutyric acid, but it's not in the options
+    "I": "2-aminobutyric acid",  # This is incompatible with the following because both are on the same group
+    "R": "diaminobutyric acid",
 }
 
