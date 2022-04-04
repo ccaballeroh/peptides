@@ -24,3 +24,8 @@ All the possible settings are in one [settings.py](./src/settings.py) file.
 ## Usage
 
 There's a [Jupyter Notebook](./Example.ipynb) example with how to use the code.
+
+
+## UPDATE!
+
+There's a new and rough [Jupyter Notebook](./Example_expert.ipynb) with an example usage of the new function `send_sequence_expert`.
