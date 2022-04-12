@@ -20,6 +20,7 @@ from src.constants import (
     SETTINGS,
 )
 from src.experts import generate_params
+from settings import LIBRARY
 
 __all__ = ["send_sequence", "download", "send_sequence_mods", "send_sequence_expert"]
 
@@ -37,7 +38,7 @@ def _get_ran_url(sequence: str) -> str:
     fields = {
         "MAX_FILE_SIZE": 1000000,
         "seq": sequence,
-        "fflib": "ffncaa",
+        "fflib": LIBRARY,
         "send": "Submit and Go to Next Step",
     }
     request = requests.post(url, data=fields)
