@@ -9,6 +9,7 @@ from src.settings import (
     LOG_FILE,
     DOWNLOAD_PATH,
     MODIFICATIONS_RULES,
+    LIBRARY,
 )
 
 __all__ = [
@@ -31,7 +32,7 @@ __all__ = [
 BASE_URL = "https://webs.iiitd.edu.in/raghava/pepstrmod/"
 LETTERS_FIELDS = [f"aa{i}" for i in range(1, 26)]
 MODIFICATIONS_FIELDS = [f"secstr{i}" for i in range(1, 26)]
-_MODIFIERS_FILE = Path(r"support_files/modifiers.json")
+_MODIFIERS_FILE = Path(fr"support_files/modifiers_beginner_{LIBRARY}.json")
 
 PATH = Path(r"support_files")
 

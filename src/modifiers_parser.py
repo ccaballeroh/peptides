@@ -2,14 +2,15 @@ import json
 import re
 from pathlib import Path
 from typing import Dict, Tuple
+from src.settings import LIBRARY
 
 PATH = Path(r"support_files")
 
-INPUT_FILE = PATH / Path(r"modifiers.html")
-OUTPUT_FILE = PATH / Path(r"modifiers.json")
+INPUT_FILE = PATH / Path(fr"modifiers_{LIBRARY}_beginner.html")
+OUTPUT_FILE = PATH / Path(fr"modifiers_beginner_{LIBRARY}.json")
 
-SWISS = PATH / Path(r"swiss_modifiers.html")
-FFNCAA = PATH / Path(r"ffncaa_modifiers.html")
+SWISS = PATH / Path(r"swiss_modifiers_expert.html")
+FFNCAA = PATH / Path(r"ffncaa_modifiers_expert.html")
 
 
 def parse_html_modifiers(
