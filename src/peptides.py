@@ -20,7 +20,7 @@ from src.constants import (
     SETTINGS,
 )
 from src.experts import generate_params
-from settings import LIBRARY
+from src.settings import LIBRARY
 
 __all__ = ["send_sequence", "download", "send_sequence_mods", "send_sequence_expert"]
 
