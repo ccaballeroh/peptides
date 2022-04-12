@@ -10,7 +10,8 @@ SETTINGS = {
     "graph": "no",  # Graph and RMS: No
 }
 
-LIBRARY = "ffncaa"  # other option is "swiss"
+LIBRARY = "ffncaa"  # Comment out either this line or the next
+# LIBRARY = "swiss"
 
 ## File names and folder paths
 
